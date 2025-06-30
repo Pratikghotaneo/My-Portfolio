@@ -53,7 +53,10 @@ const Buttons = ({ name, type, onClick, className, icon }: ButtonProps) => {
     {
       name: "outline",
       component: (
-        <button className="flex gap-2 px-3 md:px-6  py-2 bg-transparent border border-black dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400">
+        <button
+          onClick={onClick}
+          className="flex gap-2 px-3 md:px-6  py-2 bg-transparent border border-black dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400"
+        >
           {icon}
           {name}
         </button>

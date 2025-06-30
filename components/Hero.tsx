@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Spotlight } from "@/components/ui/Spotlight";
@@ -6,7 +7,8 @@ import { FlipWords } from "./ui/FlipWorlds";
 import Image from "next/image";
 import UserImg from "../public/user-img.png";
 import Buttons from "./ui/Buttons";
-import {  Contact, Download } from "lucide-react";
+import { Download } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
   const words = [
@@ -72,23 +74,23 @@ export default function Hero() {
         </p>
 
         <div className="flex justify-center gap-6 mt-5">
-          <Buttons
-            name="Contact me"
-            type="outline"
-            icon={<Contact color="white" size={24} />}
-          />
+          <Link href="#contact">
+            <Buttons name="Contact me" type="outline" />
+          </Link>
 
-          <Buttons
-            name="Download resume"
-            type="liftupborders"
-            icon={<Download />}
-          />
+          <Link
+            href="/PSG-resume.pdf"
+            download="PSG-resume.pdf"
+            rel="noopener noreferrer"
+          >
+            <Buttons
+              name="Download resume"
+              type="liftupborders"
+              icon={<Download />}
+            />
+          </Link>
         </div>
       </div>
     </div>
   );
 }
-
-
-
-
