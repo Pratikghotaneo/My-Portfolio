@@ -40,14 +40,14 @@ const skills = [
 export default function SkillsSection() {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, {
-    once: true,
-    margin: "0px 0px -100px 0px",
+    once: false,
+    margin: "0px 0px -180px 0px",
   });
 
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen bg-[#0c0c1d] text-white py-20 px-4"
+      className="min-h-screen bg-[#0c0c1d] text-white py-10 px-4"
     >
       <div className="max-w-6xl mx-auto text-center">
         <motion.h2

@@ -1,3 +1,5 @@
+import Approach from "@/components/Apporach";
+import Experience from "@/components/Expreamce";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import Tech from "@/components/Tech";
@@ -9,6 +11,8 @@ const page = () => {
       <Hero />
       <Grid />
       <Tech />
+      <Experience />
+      <Approach />
     </div>
   );
 };
