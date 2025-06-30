@@ -8,7 +8,6 @@ import {
   Database,
   DatabaseIcon,
   FileCode,
-  GitBranch,
   Globe,
   LayoutGrid,
   Network,
