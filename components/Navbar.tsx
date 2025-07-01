@@ -5,26 +5,38 @@ import {
   NavItems,
   MobileNav,
   NavbarLogo,
-  NavbarButton,
   MobileNavHeader,
   MobileNavToggle,
   MobileNavMenu,
 } from "@/components/ui/ResizeNavbar";
 import { useState } from "react";
+import { Link } from "react-scroll";
 
 export function NavbarDemo() {
   const navItems = [
     {
-      name: "Features",
-      link: "#features",
+      name: "Home",
+      link: "home",
     },
     {
-      name: "Pricing",
-      link: "#pricing",
+      name: "About",
+      link: "about",
+    },
+    {
+      name: "Skills",
+      link: "skills",
+    },
+    {
+      name: "My Expreance",
+      link: "expreance",
+    },
+    {
+      name: "My Apporach",
+      link: "apporach",
     },
     {
       name: "Contact",
-      link: "#contact",
+      link: "contact",
     },
   ];
 
@@ -34,13 +46,13 @@ export function NavbarDemo() {
     <div className="relative w-full">
       <Navbar>
         {/* Desktop Navigation */}
-        <NavBody className="fixed top-0 left-0 right-0 z-50">
+        <NavBody className="fixed top-0 left-0 right-0 z-50 cursor-pointer">
           <NavbarLogo />
           <NavItems items={navItems} />
-          <div className="flex items-center gap-4">
+          {/* <div className="flex items-center gap-4">
             <NavbarButton variant="secondary">Login</NavbarButton>
             <NavbarButton variant="primary">Book a call</NavbarButton>
-          </div>
+          </div> */}
         </NavBody>
 
         {/* Mobile Navigation */}
@@ -58,31 +70,17 @@ export function NavbarDemo() {
             onClose={() => setIsMobileMenuOpen(false)}
           >
             {navItems.map((item, idx) => (
-              <a
+              <Link
                 key={`mobile-link-${idx}`}
-                href={item.link}
+                to={item.link}
+                smooth={true}
+                duration={500}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="relative text-neutral-600 dark:text-neutral-300"
               >
                 <span className="block">{item.name}</span>
-              </a>
+              </Link>
             ))}
-            <div className="flex w-full flex-col gap-4">
-              <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full"
-              >
-                Login
-              </NavbarButton>
-              <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full"
-              >
-                Book a call
-              </NavbarButton>
-            </div>
           </MobileNavMenu>
         </MobileNav>
       </Navbar>

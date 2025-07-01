@@ -10,7 +10,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="bg-[#000319]">
+    <div className="bg-[#000319] relative">
       <NavbarDemo />
       <Hero />
       <Grid />

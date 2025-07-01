@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import { FaAngular } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
-
+// import { Element } from "react-scroll";
 const skills = [
   { name: "React", icon: Atom },
   { name: "Next.js", icon: Globe },
@@ -46,8 +46,9 @@ export default function SkillsSection() {
 
   return (
     <section
+      id="skills"
       ref={sectionRef}
-      className="min-h-screen bg-[#0c0c1d] text-white py-10 px-4"
+      className="min-h-screen bg-[#0c0c1d] text-white py-20 px-4"
     >
       <div className="max-w-6xl mx-auto text-center">
         <motion.h2
