@@ -34,7 +34,7 @@ export function NavbarDemo() {
     <div className="relative w-full">
       <Navbar>
         {/* Desktop Navigation */}
-        <NavBody>
+        <NavBody className="fixed top-0 left-0 right-0 z-50">
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
