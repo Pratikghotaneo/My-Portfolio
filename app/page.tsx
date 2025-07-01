@@ -3,6 +3,7 @@ import Contact from "@/components/Contact";
 import Experience from "@/components/Expreamce";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
+import { NavbarDemo } from "@/components/Navbar";
 // import RecentProjects from "@/components/RecentProject";
 import Tech from "@/components/Tech";
 import React from "react";
@@ -10,6 +11,7 @@ import React from "react";
 const page = () => {
   return (
     <div className="bg-[#000319]">
+      <NavbarDemo />
       <Hero />
       <Grid />
       <Tech />

@@ -2,6 +2,7 @@
 
 import { Mail, Phone, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
+import { Element } from "react-scroll";
 
 const contactItems = [
   {
@@ -26,8 +27,8 @@ const contactItems = [
 
 export default function ContactSection() {
   return (
-    <section
-      id="contact"
+    <Element
+      name="contact"
       className="relative min-h-screen px-6 py-20 bg-gradient-to-br from-slate-900 to-slate-950 text-white overflow-hidden flex flex-col items-center justify-center"
     >
       {/* Background Effects */}
@@ -76,6 +77,6 @@ export default function ContactSection() {
           </motion.a>
         ))}
       </div>
-    </section>
+    </Element>
   );
 }

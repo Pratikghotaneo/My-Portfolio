@@ -8,7 +8,8 @@ import Image from "next/image";
 import UserImg from "../public/user-img.png";
 import Buttons from "./ui/Buttons";
 import { Download } from "lucide-react";
-import Link from "next/link";
+import { Link } from "react-scroll";
+import NextLink from "next/link";
 
 export default function Hero() {
   const words = [
@@ -74,11 +75,11 @@ export default function Hero() {
         </p>
 
         <div className="flex justify-center gap-6 mt-5">
-          <Link href="#contact">
+          <Link to="contact" smooth={true} duration={500}>
             <Buttons name="Contact me" type="outline" />
           </Link>
 
-          <Link
+          <NextLink
             href="/PSG-resume.pdf"
             download="PSG-resume.pdf"
             rel="noopener noreferrer"
@@ -88,7 +89,7 @@ export default function Hero() {
               type="liftupborders"
               icon={<Download />}
             />
-          </Link>
+          </NextLink>
         </div>
       </div>
     </div>
