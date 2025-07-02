@@ -14,12 +14,12 @@ import NextLink from "next/link";
 export default function Hero() {
   const words = [
     {
-      text: "Hii! I'm",
-      className: "text-neutral-300",
+      text: "Hii! I'm ",
+      className: "text-neutral-300 text-2xl md:text-xl",
     },
     {
       text: "Pratik S. Ghotane 🙋‍♂️",
-      className: "text-blue-400",
+      className: "text-blue-400 text-2xl md:text-xl",
     },
   ];
 
@@ -56,10 +56,7 @@ export default function Hero() {
           </div>
 
           <div className="flex justify-center">
-            <TypewriterEffectSmooth
-              words={words}
-              //  className="text-center"
-            />
+            <TypewriterEffectSmooth words={words} className="text-center" />
           </div>
           <h1 className="relative text-center text-3xl font-bold bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-transparent bg-opacity-50 transition-all duration-500 ease-in-out md:text-6xl">
             Frontend&nbsp;
