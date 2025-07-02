@@ -64,7 +64,7 @@ export default function Hero() {
           <h1 className="relative text-center text-3xl font-bold bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-transparent bg-opacity-50 transition-all duration-500 ease-in-out md:text-6xl">
             Frontend&nbsp;
             <span className="inline-block min-w-[130px] transition-all duration-300 ease-in-out">
-              <FlipWords words={platform} className="text-transparent" />
+              <FlipWords words={platform} className="text-blue-600" />
             </span>
             Developer.
           </h1>

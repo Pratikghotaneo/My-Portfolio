@@ -1,6 +1,7 @@
 import Approach from "@/components/Apporach";
 import Contact from "@/components/Contact";
 import Experience from "@/components/Expreamce";
+import FloatingButton from "@/components/FloatingButton";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import { NavbarDemo } from "@/components/Navbar";
@@ -19,6 +20,8 @@ const page = () => {
       <Approach />
       {/* <RecentProjects /> */}
       <Contact />
+
+      <FloatingButton />
     </div>
   );
 };
